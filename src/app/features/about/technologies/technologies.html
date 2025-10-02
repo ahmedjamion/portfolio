@@ -1,0 +1,24 @@
+<div class="flex flex-col items-center gap-4">
+  <h3 class="text-lg font-semibold">Technologies Explored</h3>
+
+  <h4>Languages</h4>
+  <div class="flex flex-wrap items-center justify-center">
+    @for (lang of languages(); track lang.name) {
+    <app-technology [name]="lang.name" [iconName]="lang.iconName" [iconSize]="lang.iconSize" />
+    }
+  </div>
+
+  <h4>Frameworks</h4>
+  <div class="flex flex-wrap items-center justify-center">
+    @for (fw of frameworks(); track fw.name) {
+    <app-technology [name]="fw.name" [iconName]="fw.iconName" [iconSize]="fw.iconSize" />
+    }
+  </div>
+
+  <h4>Concepts</h4>
+  <div class="flex flex-wrap gap-4 items-center justify-center">
+    @for (concept of concepts(); track concept.name) {
+    <app-concept [name]="concept.name" [color]="concept.color" />
+    }
+  </div>
+</div>

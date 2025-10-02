@@ -1,0 +1,13 @@
+<app-section>
+  <app-section-title text="Projects" />
+  <div>
+    @for (project of projects(); track project.name) {
+    <app-project
+      [name]="project.name"
+      [description]="project.description"
+      [imageUrl]="project.imageUrl"
+      [githubUrl]="project.githubUrl"
+    />
+    }
+  </div>
+</app-section>

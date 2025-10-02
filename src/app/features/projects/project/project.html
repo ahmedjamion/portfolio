@@ -1,0 +1,20 @@
+<div class="max-w-2xs flex flex-col gap-2">
+  @if (imageUrl()) {
+  <img [src]="imageUrl()" alt="Project" class="rounded-2xl" />
+  }
+
+  <p class="text-lg font-semibold">{{ name() }}</p>
+  <p class="text-pretty text-sm">{{ description() }}</p>
+
+  @if (githubUrl()) {
+  <a
+    [href]="githubUrl()"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="px-4 py-2 rounded-full hover:bg-gray-200 self-center flex gap-2"
+  >
+    <p>View on Github</p>
+    <app-icon name="github" size="16" />
+  </a>
+  }
+</div>
