@@ -1,0 +1,14 @@
+<button cdkOverlayOrigin #trigger="cdkOverlayOrigin" (click)="toggle()" class="flex items-center">
+  <app-icon name="menu" size="24" />
+</button>
+
+@if (isOpen()) {
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen()"
+  [cdkConnectedOverlayPositions]="positions"
+  (overlayOutsideClick)="close()"
+>
+</ng-template>
+}

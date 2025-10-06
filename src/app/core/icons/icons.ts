@@ -4,6 +4,7 @@ import {
   lucideCopy,
   lucideMail,
   lucideMapPin,
+  lucideMenu,
   lucideMessageCircleMore,
   lucideMonitorSmartphone,
   lucidePhoneCall,
@@ -42,6 +43,7 @@ export const ICONS = {
   message: lucideMessageCircleMore,
   pin: lucideMapPin,
   copy: lucideCopy,
+  menu: lucideMenu,
 
   cpp: diCplusplusOriginal,
   java: diJavaOriginal,
