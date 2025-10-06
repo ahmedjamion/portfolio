@@ -1,4 +1,7 @@
-<section class="h-[calc(100dvh-4rem)] flex flex-col items-center justify-center gap-4 p-4">
+<section
+  id="home"
+  class="h-[calc(100dvh-4rem)] flex flex-col items-center justify-center gap-4 p-4"
+>
   <img src="images/profile.png" alt="Ahmed" class="aspect-square min-h-0 max-w-xs rounded-full" />
 
   <div class="flex flex-col items-center">
@@ -8,8 +11,8 @@
   </div>
 
   <div class="flex flex-wrap gap-4 items-center justify-center">
-    <app-scroll-link text="Know more about me" />
-    <app-scroll-link text="See what I've built" />
-    <app-scroll-link text="Get in touch" />
+    <app-scroll-link sectionId="about" text="About Me" />
+    <app-scroll-link sectionId="projects" text="My Projects" />
+    <app-scroll-link sectionId="contact" text="Say Hi!" />
   </div>
 </section>
