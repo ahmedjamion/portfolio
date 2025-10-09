@@ -1,5 +1,20 @@
-<nav>
-  <ul class="hidden md:flex gap-4 text-lg">
+<nav class="hidden md:block">
+  <ul class="flex gap-4 text-lg">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<nav class="relative md:hidden">
+  <button (click)="toggleNav()" class="flex items-center cursor-pointer">
+    <app-icon name="menu" size="24" />
+  </button>
+  <ul
+    class="absolute right-0 flex flex-col items-center bg-gray-200 shadow rounded-xl p-4 gap-4 text-lg"
+    [hidden]="!isNavOpen()"
+  >
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
