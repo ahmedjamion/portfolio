@@ -1,9 +1,10 @@
 <nav class="hidden md:block">
   <ul class="flex gap-4 text-lg">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    @for (link of navLinks; track link.href) {
+    <li>
+      <a [href]="link.href" (click)="closeNav()">{{ link.label }}</a>
+    </li>
+    }
   </ul>
 </nav>
 
@@ -15,9 +16,10 @@
     class="absolute right-0 flex flex-col items-center bg-gray-200 shadow rounded-xl p-4 gap-4 text-lg"
     [hidden]="!isNavOpen()"
   >
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    @for (link of navLinks; track link.href) {
+    <li>
+      <a [href]="link.href" (click)="closeNav()">{{ link.label }}</a>
+    </li>
+    }
   </ul>
 </nav>

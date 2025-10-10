@@ -13,4 +13,15 @@ export class HeaderNav {
   toggleNav() {
     this.isNavOpen.update((isOpen) => !isOpen);
   }
+
+  closeNav() {
+    this.isNavOpen.set(false);
+  }
+
+  navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ];
 }
