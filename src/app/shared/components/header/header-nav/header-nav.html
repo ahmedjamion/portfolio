@@ -9,17 +9,25 @@
 </nav>
 
 <nav class="relative md:hidden">
-  <button (click)="toggleNav()" class="flex items-center cursor-pointer">
+  <button (click)="toggleNav()" class="flex items-center cursor-pointer" #menuButton>
     <app-icon name="menu" size="24" />
   </button>
-  <ul
-    class="absolute right-0 flex flex-col items-center bg-gray-200 shadow rounded-xl p-4 gap-4 text-lg"
-    [hidden]="!isNavOpen()"
+  <ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="menuButton"
+    [cdkConnectedOverlayOpen]="isNavOpen()"
+    (backdropClick)="closeNav()"
+    [cdkConnectedOverlayHasBackdrop]="true"
+    [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
   >
-    @for (link of navLinks; track link.href) {
-    <li>
-      <a [href]="link.href" (click)="closeNav()">{{ link.label }}</a>
-    </li>
-    }
-  </ul>
+    <ul
+      class="absolute right-0 flex flex-col items-center bg-gray-200 shadow rounded-xl p-4 gap-4 text-lg"
+    >
+      @for (link of navLinks; track link.href) {
+      <li>
+        <a [href]="link.href" (click)="closeNav()">{{ link.label }}</a>
+      </li>
+      }
+    </ul>
+  </ng-template>
 </nav>

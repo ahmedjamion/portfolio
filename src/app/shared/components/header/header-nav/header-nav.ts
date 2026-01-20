@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Icon } from '../../icon/icon';
+import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-header-nav',
-  imports: [Icon],
+  imports: [Icon, CdkConnectedOverlay],
   templateUrl: './header-nav.html',
   styleUrl: './header-nav.css',
 })
