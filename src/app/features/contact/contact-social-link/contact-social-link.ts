@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Icon } from '../../../shared/components/icon/icon';
 
 @Component({
@@ -6,6 +6,7 @@ import { Icon } from '../../../shared/components/icon/icon';
   imports: [Icon],
   templateUrl: './contact-social-link.html',
   styleUrl: './contact-social-link.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactSocialLink {
   readonly text = input.required<string>();

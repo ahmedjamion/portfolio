@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Icon } from '../../../icon/icon';
 
 @Component({
@@ -6,6 +6,7 @@ import { Icon } from '../../../icon/icon';
   imports: [Icon],
   templateUrl: './header-social-links-item.html',
   styleUrl: './header-social-links-item.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderSocialLinksItem {
   readonly iconName = input.required<string>();

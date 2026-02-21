@@ -1,6 +1,6 @@
 <div class="max-w-2xs flex flex-col gap-2">
   @if (imageUrl()) {
-  <img [src]="imageUrl()" alt="Project" class="rounded-2xl" />
+  <img [ngSrc]="imageUrl()!" alt="Project" class="rounded-2xl" width="300" height="300" priority />
   }
 
   <p class="text-lg font-semibold">{{ name() }}</p>

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { Header } from './shared/components/header/header';
 import { Footer } from './features/footer/footer';
 import { Home } from './features/home/home';
@@ -12,6 +12,7 @@ import { provideIcons } from '@ng-icons/core';
   imports: [Header, Footer, Home, About, Projects, Contact],
   templateUrl: './app.html',
   styleUrl: './app.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
   protected readonly title = signal('portfolio');

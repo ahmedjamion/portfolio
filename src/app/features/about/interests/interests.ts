@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Interest } from './interest/interest';
 
 @Component({
@@ -6,5 +6,6 @@ import { Interest } from './interest/interest';
   imports: [Interest],
   templateUrl: './interests.html',
   styleUrl: './interests.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Interests {}

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { getConceptColor } from '../../../../core/configs/concept-colors';
 
 @Component({
   selector: 'app-concept',
@@ -9,5 +10,6 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 })
 export class Concept {
   readonly name = input.required<string>();
-  readonly color = input.required<string>();
+
+  readonly color = computed(() => getConceptColor(this.name()));
 }

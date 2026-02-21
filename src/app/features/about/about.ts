@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Section } from '../../shared/components/section/section';
 import { Interests } from './interests/interests';
 import { Technologies } from './technologies/technologies';
@@ -9,5 +9,6 @@ import { SectionTitle } from '../../shared/components/section-title/section-titl
   imports: [Section, Interests, Technologies, SectionTitle],
   templateUrl: './about.html',
   styleUrl: './about.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class About {}

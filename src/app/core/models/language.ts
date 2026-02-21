@@ -1,6 +1,3 @@
-export interface Language {
-  name: string;
-  iconName: string;
-  iconSize: string;
-  iconColor?: string;
-}
+import { TechItem } from './tech-item';
+
+export type Language = TechItem;

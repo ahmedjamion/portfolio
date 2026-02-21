@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { ICONS } from '../../../core/icons/icons';
 
@@ -7,6 +7,7 @@ import { ICONS } from '../../../core/icons/icons';
   imports: [NgIcon],
   templateUrl: './icon.html',
   styleUrl: './icon.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'flex items-center',
   },

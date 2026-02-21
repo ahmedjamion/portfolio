@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Technology } from './technology/technology';
 import { LanguageService } from '../../../core/services/language-service/language-service';
 import { FrameworkService } from '../../../core/services/framework-service/framework-service';
@@ -10,6 +10,7 @@ import { Concept } from './concept/concept';
   imports: [Technology, Concept],
   templateUrl: './technologies.html',
   styleUrl: './technologies.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Technologies {
   private readonly languageService = inject(LanguageService);
