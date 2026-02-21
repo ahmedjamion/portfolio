@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Concept } from './concept';
 
 describe('Concept', () => {
@@ -13,11 +12,11 @@ describe('Concept', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(Concept);
-    component = fixture.componentInstance;
+    fixture.componentRef.setInput('name', 'OOP');
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

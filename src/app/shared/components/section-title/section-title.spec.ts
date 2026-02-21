@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SectionTitle } from './section-title';
 
 describe('SectionTitle', () => {
@@ -13,11 +12,11 @@ describe('SectionTitle', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(SectionTitle);
-    component = fixture.componentInstance;
+    fixture.componentRef.setInput('text', 'Test Title');
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

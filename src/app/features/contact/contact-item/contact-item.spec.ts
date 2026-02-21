@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideIcons } from '@ng-icons/core';
+import { ICONS } from '../../../core/icons/icons';
 import { ContactItem } from './contact-item';
 
 describe('ContactItem', () => {
@@ -8,16 +9,19 @@ describe('ContactItem', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactItem]
+      imports: [ContactItem],
+      providers: [provideIcons(ICONS)]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(ContactItem);
-    component = fixture.componentInstance;
+    fixture.componentRef.setInput('text', 'test@example.com');
+    fixture.componentRef.setInput('iconName', 'email');
+    fixture.componentRef.setInput('iconSize', '24');
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

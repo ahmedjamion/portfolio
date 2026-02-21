@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideIcons } from '@ng-icons/core';
+import { ICONS } from '../../../core/icons/icons';
 import { ContactSocialLink } from './contact-social-link';
 
 describe('ContactSocialLink', () => {
@@ -8,16 +9,19 @@ describe('ContactSocialLink', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactSocialLink]
+      imports: [ContactSocialLink],
+      providers: [provideIcons(ICONS)]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(ContactSocialLink);
-    component = fixture.componentInstance;
+    fixture.componentRef.setInput('text', 'GitHub');
+    fixture.componentRef.setInput('url', 'https://github.com');
+    fixture.componentRef.setInput('iconName', 'github');
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

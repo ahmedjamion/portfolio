@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ScrollLink } from './scroll-link';
 
 describe('ScrollLink', () => {
@@ -13,11 +12,12 @@ describe('ScrollLink', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(ScrollLink);
-    component = fixture.componentInstance;
+    fixture.componentRef.setInput('text', 'About');
+    fixture.componentRef.setInput('sectionId', 'about');
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

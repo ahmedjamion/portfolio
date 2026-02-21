@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import { ICONS } from '../../../core/icons/icons';
+import { NgIcon } from '@ng-icons/core';
 
 @Component({
   selector: 'app-icon',
@@ -11,7 +10,6 @@ import { ICONS } from '../../../core/icons/icons';
   host: {
     class: 'flex items-center',
   },
-  providers: [provideIcons(ICONS)],
 })
 export class Icon {
   readonly name = input.required<string>();
