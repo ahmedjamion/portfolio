@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1768910674344,
+  "timestamp": 1771692281577,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/portfolio/favicon.ico",
         "/portfolio/index.html",
-        "/portfolio/main-F6OXF2BY.js",
+        "/portfolio/main-XKQXPKFY.js",
         "/portfolio/manifest.webmanifest",
-        "/portfolio/styles-6FIEE5SX.css"
+        "/portfolio/styles-KRUTZWDQ.css"
       ],
       "patterns": []
     },
@@ -50,10 +50,10 @@
     "/portfolio/images/profile.png": "27ece2936f8ea779ac0676d3ebf0a74ab6b76c3a",
     "/portfolio/images/sleep.png": "6c68a306a3cd8b58a1594b33c18d74a12957cc4f",
     "/portfolio/images/todolist.png": "72da1ccee966b70f26927ec8c30e8ff995a0e72b",
-    "/portfolio/index.html": "667daedb6470d149417256fb1322b7d90e84872f",
-    "/portfolio/main-F6OXF2BY.js": "497bea30101edcc234ad3989f6474b236d699d4d",
+    "/portfolio/index.html": "e3f53e07a9f8ef4e91a192f5cbcbb641998699c1",
+    "/portfolio/main-XKQXPKFY.js": "21e91dfab0799503066c8a88f15c8fdd57e0d9a9",
     "/portfolio/manifest.webmanifest": "ecde7b1d980b4397e2b7e8b363a57343f5edc5a7",
-    "/portfolio/styles-6FIEE5SX.css": "4461ef6510786e6c972a0e31427b0dfdde84ba22"
+    "/portfolio/styles-KRUTZWDQ.css": "13fe809374db8bb0215ce393e4f82bb00baf3598"
   },
   "navigationUrls": [
     {
