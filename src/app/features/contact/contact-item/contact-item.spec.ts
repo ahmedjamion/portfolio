@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideIcons } from '@ng-icons/core';
 import { ICONS } from '../../../core/icons/icons';
-import { ContactItem } from './contact-item';
+import { ContactItem } from './contact-item.component';
 
 describe('ContactItem', () => {
   let component: ContactItem;
@@ -10,9 +10,8 @@ describe('ContactItem', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ContactItem],
-      providers: [provideIcons(ICONS)]
-    })
-    .compileComponents();
+      providers: [provideIcons(ICONS)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ContactItem);
     fixture.componentRef.setInput('text', 'test@example.com');

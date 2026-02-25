@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderNav } from './header-nav';
+import { HeaderNav } from './header-nav.component';
 
 describe('HeaderNav', () => {
   let component: HeaderNav;
@@ -8,9 +8,8 @@ describe('HeaderNav', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderNav]
-    })
-    .compileComponents();
+      imports: [HeaderNav],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderNav);
     component = fixture.componentInstance;

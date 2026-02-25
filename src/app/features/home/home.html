@@ -1,15 +1,63 @@
-<section id="home" class="h-lvh flex flex-col items-center justify-center gap-4 p-4" appAnimateIn>
-  <img src="images/profile.png" alt="Ahmed" class="aspect-square min-h-0 max-w-xs rounded-full" />
-
-  <div class="flex flex-col items-center">
-    <h1 class="text-4xl">Hi, I'm <span class="font-bold">Ahmed</span></h1>
-    <p class="text-xl font-extralight">Doom Scroller</p>
-    <p class="text-center text-balance text-sm">I don't know much, but I like making stuff work.</p>
+<section id="home" class="h-lvh flex flex-col items-center justify-center gap-6 p-4 relative overflow-hidden" appAnimateIn>
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-20 pointer-events-none">
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-[#ff00ff] rounded-full blur-[128px] animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#00ffff] rounded-full blur-[128px] animate-pulse"></div>
   </div>
 
-  <div class="flex flex-wrap gap-4 items-center justify-center">
-    <app-scroll-link sectionId="about" text="About Me" />
-    <app-scroll-link sectionId="projects" text="My Projects" />
-    <app-scroll-link sectionId="contact" text="Say Hi!" />
+  <!-- Profile with neon border - CHAOS MODE -->
+  <div class="relative profile-chaos">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#ff00ff] via-[#00ffff] to-[#ff00ff] rounded-full blur-xl opacity-50 animate-pulse"></div>
+    <img 
+      src="images/profile.png" 
+      alt="Ahmed" 
+      class="relative w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#00ffff] shadow-[0_0_30px_rgba(0,255,255,0.5)] hover:animate-spin"
+      appGlitch="intense"
+      appHoverChaos
+    />
+  </div>
+
+  <!-- CHAOTIC MAIN HEADING -->
+  <div class="flex flex-col items-center gap-2 z-10 text-center">
+    <h1 
+      class="chaos-heading glitch-3d text-[#ff00ff]" 
+      data-text="AHMED"
+      appGlitch="intense"
+    >
+      AHMED
+    </h1>
+    
+    <!-- Chaotic subtitle -->
+    <p class="chaos-subheading text-[#00ffff] scanline-text" appGlitch="intense">
+      FLAT EARTHER
+    </p>
+    
+    <p class="text-lg text-gray-400 glitch" data-text="codes sometimes" appGlitch="mild">
+      codes sometimes
+    </p>
+    <p class="text-md text-[#ffff00] glitch" data-text="has free will" appGlitch="mild">
+      has free will
+    </p>
+    <p class="text-sm text-red-500 mt-2 flicker glitch-intense" data-text="SEND HELP" appGlitch="intense">
+      SEND HELP
+    </p>
+  </div>
+
+  <!-- CTA Buttons - CHAOS MODE -->
+  <div class="flex flex-wrap gap-4 items-center justify-center z-10 mt-4">
+    <a href="#about" class="cyber-btn cyber-btn-chaos hover:bg-[#00ff00] hover:text-black" appHoverChaos>
+      <span>&lt;</span> ABOUT <span>/&gt;</span>
+    </a>
+    <a href="#projects" class="cyber-btn cyber-btn-pink cyber-btn-chaos hover:bg-[#ff00ff] hover:text-black" appHoverChaos>
+      <span>&lt;</span> STUFF <span>/&gt;</span>
+    </a>
+    <a href="#contact" class="cyber-btn cyber-btn-chaos hover:bg-[#00ffff] hover:text-black" appHoverChaos>
+      <span>&lt;</span> CONTACT <span>/&gt;</span>
+    </a>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#00ffff] animate-bounce">
+    <span class="text-sm">↓</span>
   </div>
 </section>

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideIcons } from '@ng-icons/core';
 import { ICONS } from '../../../../../core/icons/icons';
-import { HeaderSocialLinksItem } from './header-social-links-item';
+import { HeaderSocialLinksItem } from './header-social-links-item.component';
 
 describe('HeaderSocialLinksItem', () => {
   let component: HeaderSocialLinksItem;
@@ -10,9 +10,8 @@ describe('HeaderSocialLinksItem', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HeaderSocialLinksItem],
-      providers: [provideIcons(ICONS)]
-    })
-    .compileComponents();
+      providers: [provideIcons(ICONS)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderSocialLinksItem);
     component = fixture.componentInstance;

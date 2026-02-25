@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideIcons } from '@ng-icons/core';
 import { ICONS } from '../../../core/icons/icons';
-import { ContactSocialLink } from './contact-social-link';
+import { ContactSocialLink } from './contact-social-link.component';
 
 describe('ContactSocialLink', () => {
   let component: ContactSocialLink;
@@ -10,9 +10,8 @@ describe('ContactSocialLink', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ContactSocialLink],
-      providers: [provideIcons(ICONS)]
-    })
-    .compileComponents();
+      providers: [provideIcons(ICONS)],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ContactSocialLink);
     fixture.componentRef.setInput('text', 'GitHub');
