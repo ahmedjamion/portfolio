@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderSocialLinks } from './header-social-links.component';
+import { HeaderSocialLinks } from './header-social-links';
 
 describe('HeaderSocialLinks', () => {
   let component: HeaderSocialLinks;
@@ -8,8 +8,9 @@ describe('HeaderSocialLinks', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderSocialLinks],
-    }).compileComponents();
+      imports: [HeaderSocialLinks]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(HeaderSocialLinks);
     component = fixture.componentInstance;

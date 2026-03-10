@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectionTitle } from './section-title.component';
+import { SectionTitle } from './section-title';
 
 describe('SectionTitle', () => {
   let component: SectionTitle;
@@ -7,8 +7,9 @@ describe('SectionTitle', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SectionTitle],
-    }).compileComponents();
+      imports: [SectionTitle]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(SectionTitle);
     fixture.componentRef.setInput('text', 'Test Title');

@@ -1,37 +1,32 @@
-<!-- Desktop Navigation -->
 <nav class="hidden md:block">
-  <ul class="flex gap-6 text-lg">
+  <ul class="flex gap-4 text-lg">
     @for (link of navLinks; track link.href) {
     <li>
       <a
         [href]="link.href"
         (click)="closeNav()"
-        [class.neon-pink]="activeSection() === link.id"
-        [class.text-gray-400]="activeSection() !== link.id"
-        class="hover:text-[#00ffff] transition-all duration-200 px-2 py-1"
+        [class.text-blue-600]="activeSection() === link.id"
+        [class.font-semibold]="activeSection() === link.id"
       >
-        <span class="text-[#00ff00]">&lt;</span>
         {{ link.label }}
-        <span class="text-[#00ff00]">/&gt;</span>
       </a>
     </li>
     }
   </ul>
 </nav>
 
-<!-- Mobile Navigation -->
 <nav class="relative md:hidden flex items-center gap-2">
   @if (!isNavOpen()) {
-  <span class="text-lg font-semibold text-[#00ffff]">{{ activeSection() | titlecase }}</span>
+  <span class="text-lg font-semibold">{{ activeSection() | titlecase }}</span>
   }
 
   <button
     (click)="toggleNav()"
-    class="flex items-center cursor-pointer p-2 border border-[#ff00ff] rounded hover:bg-[#ff00ff]/20 transition-colors"
+    class="flex items-center cursor-pointer"
     #menuButton
     [attr.aria-label]="isNavOpen() ? 'Close menu' : 'Open menu'"
   >
-    <app-icon name="menu" size="24" color="#ff00ff" />
+    <app-icon name="menu" size="24" />
   </button>
 
   <ng-template
@@ -43,19 +38,17 @@
     [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
   >
     <ul
-      class="absolute right-0 flex flex-col items-center bg-[#0a0a0f] border border-[#ff00ff] shadow-[0_0_20px_rgba(255,0,255,0.3)] rounded-xl p-6 gap-4 text-lg min-w-[200px]"
+      class="absolute right-0 flex flex-col items-center bg-gray-200 shadow rounded-xl p-4 gap-4 text-lg"
     >
       @for (link of navLinks; track link.href) {
       <li>
         <a
           [href]="link.href"
           (click)="closeNav()"
-          [class.neon-pink]="activeSection() === link.id"
-          [class.text-gray-400]="activeSection() !== link.id"
-          class="hover:text-[#00ffff] transition-all duration-200 block"
+          [class.text-blue-600]="activeSection() === link.id"
+          [class.font-semibold]="activeSection() === link.id"
+          >{{ link.label }}</a
         >
-          <span class="text-[#00ff00]">&lt;</span>{{ link.label }}<span class="text-[#00ff00]">/&gt;</span>
-        </a>
       </li>
       }
     </ul>

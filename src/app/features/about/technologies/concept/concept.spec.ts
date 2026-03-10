@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Concept } from './concept.component';
+import { Concept } from './concept';
 
 describe('Concept', () => {
   let component: Concept;
@@ -7,8 +7,9 @@ describe('Concept', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Concept],
-    }).compileComponents();
+      imports: [Concept]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(Concept);
     fixture.componentRef.setInput('name', 'OOP');

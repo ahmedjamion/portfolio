@@ -1,44 +1,13 @@
-<app-section [id]="'about'">
-  <!-- CHAOTIC HEADING -->
-  <h2 
-    class="chaos-heading text-[#00ffff] mb-12" 
-    data-text="ABOUT"
-    appGlitch="intense"
-  >
-    ABOUT
-  </h2>
-
-  <!-- Bio -->
-  <div class="flex flex-col md:flex-row gap-8 items-center max-w-4xl">
-    <!-- Image -->
-    <img 
-      src="images/coding.png" 
-      alt="Coding" 
-      class="w-40 h-40 md:w-48 md:h-48 border-4 border-[#ff00ff] shadow-[0_0_20px_rgba(255,0,255,0.5)] cyber-card-chaos glitch-3d"
-      appGlitch="intense"
-      appHoverChaos
-    />
-    
-    <!-- CHAOTIC BIO -->
-    <div class="text-left space-y-4 text-gray-400">
-      <p class="text-xl glitch" data-text="> INJECTING KNOWLEDGE SINCE 2024" appGlitch="intense">> INJECTING KNOWLEDGE SINCE 2024</p>
-      <p class="glitch" data-text="makes stuff" appGlitch="mild">makes stuff</p>
-      <p class="glitch" data-text="breaks stuff" appGlitch="mild">breaks stuff</p>
-      <p class="glitch" data-text="knows some stuff" appGlitch="mild">knows some stuff</p>
-      <p class="glitch" data-text="doesn't know other stuff" appGlitch="mild">doesn't know other stuff</p>
-      <p class="text-[#00ff00] glitch-intense" data-text="STATUS: COMPROMISED" appGlitch="intense">STATUS: COMPROMISED</p>
-    </div>
+<app-section id="about">
+  <app-section-title text="About Me" />
+  <div class="flex flex-wrap gap-4 items-center justify-center">
+    <img src="images/coding.png" alt="Coding" class="size-64 rounded-2xl" />
+    <p class="text-balance text-center max-w-sm">
+      Beginner programmer who enjoys learning and exploring how things work. I like building small
+      projects that help me practice and improve.
+    </p>
   </div>
 
-  <!-- Interests - CHAOTIC -->
-  <div class="mt-12">
-    <h3 class="chaos-subheading text-[#ffff00] mb-6" appGlitch="intense">BUFFER SATISFACTION</h3>
-    <app-interests />
-  </div>
-
-  <!-- Tech Stack - CHAOTIC -->
-  <div class="mt-8">
-    <h3 class="chaos-subheading text-[#ff00ff] mb-6" appGlitch="intense">STACK OVERFLOW</h3>
-    <app-technologies />
-  </div>
+  <app-interests />
+  <app-technologies />
 </app-section>

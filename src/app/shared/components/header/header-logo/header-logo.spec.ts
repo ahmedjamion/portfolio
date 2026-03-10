@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderLogo } from './header-logo.component';
+import { HeaderLogo } from './header-logo';
 
 describe('HeaderLogo', () => {
   let component: HeaderLogo;
@@ -8,8 +8,9 @@ describe('HeaderLogo', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderLogo],
-    }).compileComponents();
+      imports: [HeaderLogo]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(HeaderLogo);
     component = fixture.componentInstance;

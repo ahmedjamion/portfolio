@@ -1,22 +1,8 @@
-@if (showSplash()) {
-  <app-splash (onComplete)="onSplashComplete()" />
-}
-
-@if (showContent()) {
-  <!-- Chaos Effects Overlay -->
-  <app-chaos />
-
-  <!-- Header with navigation -->
-  <app-header />
-
-  <!-- Main content sections - single page scrolling layout -->
-  <main class="flex flex-col gap-4">
-    <app-home />
-    <app-about />
-    <app-projects />
-    <app-contact />
-  </main>
-
-  <!-- Footer -->
-  <app-footer />
-}
+<app-header />
+<main class="flex flex-col gap-4">
+  <app-home />
+  <app-about />
+  <app-projects />
+  <app-contact />
+</main>
+<app-footer />

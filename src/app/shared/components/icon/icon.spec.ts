@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideIcons } from '@ng-icons/core';
 import { ICONS } from '../../../core/icons/icons';
-import { Icon } from './icon.component';
+import { Icon } from './icon';
 
 describe('Icon', () => {
   let component: Icon;
@@ -10,8 +10,9 @@ describe('Icon', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Icon],
-      providers: [provideIcons(ICONS)],
-    }).compileComponents();
+      providers: [provideIcons(ICONS)]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(Icon);
     fixture.componentRef.setInput('name', 'menu');

@@ -1,41 +1,20 @@
-<div class="cyber-card cyber-card-chaos group h-full flex flex-col" appHoverChaos>
-  <!-- Project Image -->
+<div class="max-w-2xs flex flex-col gap-2">
   @if (imageUrl()) {
-  <div class="relative overflow-hidden mb-4">
-    <img 
-      [ngSrc]="imageUrl()!" 
-      alt="Project" 
-      class="w-full h-40 object-cover"
-      width="300"
-      height="160"
-    />
-  </div>
+  <img [ngSrc]="imageUrl()!" alt="Project" class="rounded-2xl" width="300" height="300" priority />
   }
 
-  <!-- Project Name -->
-  <p class="text-lg font-bold text-[#00ffff] mb-2 glitch" [attr.data-text]="name()" appGlitch="mild">
-    {{ name() }}
-  </p>
-  
-  <!-- Description -->
-  <p class="text-gray-400 text-sm flex-grow">{{ description() }}</p>
-  
-  <!-- Random Stats (CHAOS!) -->
-  <div class="flex justify-between text-xs mt-2 mb-2 text-[#ff00ff]">
-    <span class="glitch" [attr.data-text]="'views: ' + getRandomStat()" appGlitch="intense">views: {{ getRandomStat() }}</span>
-    <span class="glitch" [attr.data-text]="getRandomRarity()" appGlitch="intense">{{ getRandomRarity() }}</span>
-  </div>
+  <p class="text-lg font-semibold">{{ name() }}</p>
+  <p class="text-pretty text-sm">{{ description() }}</p>
 
-  <!-- Github Link -->
   @if (githubUrl()) {
   <a
     [href]="githubUrl()"
     target="_blank"
     rel="noopener noreferrer"
-    class="cyber-btn cyber-btn-chaos text-center text-sm mt-4"
-    appHoverChaos
+    class="px-4 py-2 rounded-full hover:bg-gray-200 self-center flex gap-2"
   >
-    view code
+    <p>View on Github</p>
+    <app-icon name="github" size="16" />
   </a>
   }
 </div>

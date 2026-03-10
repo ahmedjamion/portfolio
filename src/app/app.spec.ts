@@ -8,7 +8,10 @@ describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-      providers: [provideZonelessChangeDetection(), provideIcons(ICONS)],
+      providers: [
+        provideZonelessChangeDetection(),
+        provideIcons(ICONS)
+      ]
     }).compileComponents();
   });
 
@@ -18,17 +21,10 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render header, footer, and all sections', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    
-    // Check that all main components are rendered
-    expect(compiled.querySelector('app-header')).toBeTruthy();
-    expect(compiled.querySelector('app-footer')).toBeTruthy();
-    expect(compiled.querySelector('app-home')).toBeTruthy();
-    expect(compiled.querySelector('app-about')).toBeTruthy();
-    expect(compiled.querySelector('app-projects')).toBeTruthy();
-    expect(compiled.querySelector('app-contact')).toBeTruthy();
+    expect(compiled.querySelector('h1')?.textContent).toContain("Hi, I'm Ahmed");
   });
 });

@@ -7,7 +7,6 @@ import {
   lucideMenu,
   lucideMessageCircleMore,
   lucideMonitorSmartphone,
-  lucideMoon,
   lucidePhoneCall,
   lucidePin,
   lucideTabletSmartphone,
@@ -38,7 +37,6 @@ export const ICONS = {
 
   phone: lucideTabletSmartphone,
   laptop: lucideMonitorSmartphone,
-  moon: lucideMoon,
 
   email: lucideAtSign,
   call: lucidePhoneCall,

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ScrollLink } from './scroll-link.component';
+import { ScrollLink } from './scroll-link';
 
 describe('ScrollLink', () => {
   let component: ScrollLink;
@@ -7,8 +7,9 @@ describe('ScrollLink', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ScrollLink],
-    }).compileComponents();
+      imports: [ScrollLink]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(ScrollLink);
     fixture.componentRef.setInput('text', 'About');
