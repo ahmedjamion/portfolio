@@ -1,13 +1,15 @@
-<app-section id="projects">
-  <app-section-title text="My Projects" />
-  <div>
-    @for (project of projects(); track project.name) {
-    <app-project
-      [name]="project.name"
-      [description]="project.description"
-      [imageUrl]="project.imageUrl"
-      [githubUrl]="project.githubUrl"
-    />
-    }
-  </div>
-</app-section>
+<om-fade [animateOnlyOnce]="false">
+  <section id="projects" class="min-h-screen flex flex-col items-center justify-center gap-8">
+    <app-section-title text="My Projects" />
+    <div>
+      @for (project of projects(); track project.name) {
+        <app-project
+          [name]="project.name"
+          [description]="project.description"
+          [imageUrl]="project.imageUrl"
+          [githubUrl]="project.githubUrl"
+        />
+      }
+    </div>
+  </section>
+</om-fade>

@@ -1,23 +1,27 @@
 <nav class="hidden md:block">
-  <ul class="flex gap-4 text-lg">
+  <ul class="flex text-lg">
     @for (link of navLinks; track link.href) {
-    <li>
-      <a
-        [href]="link.href"
-        (click)="closeNav()"
-        [class.text-blue-600]="activeSection() === link.id"
-        [class.font-semibold]="activeSection() === link.id"
-      >
-        {{ link.label }}
-      </a>
-    </li>
+      @let isActive = activeSection() === link.id;
+      <li>
+        <a
+          [href]="link.href"
+          (click)="closeNav()"
+          class="py-1 px-3 rounded-2xl transition-all duration-300 ease-in-out"
+          [class.bg-primary]="isActive"
+          [class.text-on-primary]="isActive"
+        >
+          {{ link.label }}
+        </a>
+      </li>
     }
   </ul>
 </nav>
 
 <nav class="relative md:hidden flex items-center gap-2">
   @if (!isNavOpen()) {
-  <span class="text-lg font-semibold">{{ activeSection() | titlecase }}</span>
+    <span class="text-lg font-semibold bg-primary text-on-primary px-3 py-1 rounded-full">{{
+      activeSection() | titlecase
+    }}</span>
   }
 
   <button
@@ -33,23 +37,22 @@
     cdkConnectedOverlay
     [cdkConnectedOverlayOrigin]="menuButton"
     [cdkConnectedOverlayOpen]="isNavOpen()"
-    (backdropClick)="closeNav()"
-    [cdkConnectedOverlayHasBackdrop]="true"
-    [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
   >
     <ul
-      class="absolute right-0 flex flex-col items-center bg-gray-200 shadow rounded-xl p-4 gap-4 text-lg"
+      class="absolute right-0 flex flex-col items-center bg-background rounded-xl p-4 gap-4 text-lg drop-shadow-lg"
     >
       @for (link of navLinks; track link.href) {
-      <li>
-        <a
-          [href]="link.href"
-          (click)="closeNav()"
-          [class.text-blue-600]="activeSection() === link.id"
-          [class.font-semibold]="activeSection() === link.id"
-          >{{ link.label }}</a
-        >
-      </li>
+        @let isActive = activeSection() === link.id;
+        <li>
+          <a
+            [href]="link.href"
+            (click)="closeNav()"
+            [class.bg-primary]="isActive"
+            [class.text-on-primary]="isActive"
+            class="px-3 py-1 rounded-full"
+            >{{ link.label }}</a
+          >
+        </li>
       }
     </ul>
   </ng-template>

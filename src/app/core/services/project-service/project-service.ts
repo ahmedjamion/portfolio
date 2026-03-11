@@ -7,9 +7,8 @@ import { Project } from '../../models/project';
 export class ProjectService {
   private readonly _projects = signal<Project[]>([
     {
-      name: 'To Do List Android App',
-      description:
-        'A simple Android To-Do List app built with Kotlin, Jetpack Compose, MVVM, Hilt, and Room.',
+      name: 'To Do List',
+      description: 'A simple Android To-Do List app.',
       imageUrl: 'images/todolist.png',
       githubUrl: 'https://github.com/ahmedjamion/todolist-android.git',
     },

@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Section } from '../../shared/components/section/section';
 import { SectionTitle } from '../../shared/components/section-title/section-title';
 import { ProjectService } from '../../core/services/project-service/project-service';
 import { Project } from './project/project';
+import { NgxFadeComponent } from '@omnedia/ngx-fade';
 
 @Component({
   selector: 'app-projects',
-  imports: [Section, SectionTitle, Project],
+  imports: [SectionTitle, Project, NgxFadeComponent],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

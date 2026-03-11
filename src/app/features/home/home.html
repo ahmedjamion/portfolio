@@ -1,15 +1,23 @@
-<section id="home" class="h-lvh flex flex-col items-center justify-center gap-4 p-4" appAnimateIn>
-  <img src="images/profile.png" alt="Ahmed" class="aspect-square min-h-0 max-w-xs rounded-full" />
+<om-fade [animateOnlyOnce]="false">
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center gap-8">
+    <img
+      src="images/profile.png"
+      alt="Ahmed"
+      class="aspect-square min-h-0 w-1/2 md:max-w-xs rounded-full drop-shadow-xl"
+    />
 
-  <div class="flex flex-col items-center">
-    <h1 class="text-4xl">Hi, I'm <span class="font-bold">Ahmed</span></h1>
-    <p class="text-xl font-extralight">Doom Scroller</p>
-    <p class="text-center text-balance text-sm">I don't know much, but I like making stuff work.</p>
-  </div>
+    <div class="flex flex-col items-center">
+      <h1 class="text-4xl text-center font-bold">Ahmed Rashad Jamion</h1>
+      <om-typewriter [words]="words()" styleClass="text-2xl" [writeSpeed]="80"></om-typewriter>
+    </div>
 
-  <div class="flex flex-wrap gap-4 items-center justify-center">
-    <app-scroll-link sectionId="about" text="About Me" />
-    <app-scroll-link sectionId="projects" text="My Projects" />
-    <app-scroll-link sectionId="contact" text="Say Hi!" />
-  </div>
-</section>
+    <div class="flex flex-wrap gap-4 items-center justify-center">
+      <app-scroll-link sectionId="projects" text="Explore Projects" />
+    </div>
+
+    <div class="flex animate-bounce">
+      <p>About</p>
+      <app-icon name="arrowDown" size="20" strokeWidth="2" />
+    </div>
+  </section>
+</om-fade>

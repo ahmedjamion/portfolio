@@ -5,7 +5,6 @@ import { Home } from './features/home/home';
 import { About } from './features/about/about';
 import { Projects } from './features/projects/projects';
 import { Contact } from './features/contact/contact';
-import { provideIcons } from '@ng-icons/core';
 
 @Component({
   selector: 'app-root',

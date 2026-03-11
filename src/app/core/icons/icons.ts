@@ -1,5 +1,6 @@
 import { bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import {
+  lucideArrowDown,
   lucideAtSign,
   lucideCopy,
   lucideMail,
@@ -61,4 +62,6 @@ export const ICONS = {
   laravel: diLaravelOriginal,
   compose: diJetpackcomposeOriginal,
   tailwind: diTailwindcssOriginal,
+
+  arrowDown: lucideArrowDown,
 };

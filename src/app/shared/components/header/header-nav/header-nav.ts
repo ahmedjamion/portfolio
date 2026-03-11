@@ -1,7 +1,17 @@
-import { ChangeDetectionStrategy, Component, signal, afterNextRender, ElementRef, viewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal,
+  afterNextRender,
+  ElementRef,
+  viewChild,
+  inject,
+  effect,
+} from '@angular/core';
 import { Icon } from '../../icon/icon';
 import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 import { TitleCasePipe } from '@angular/common';
+import { BreakpointService } from '../../../../core/services/breakpoint-service/breakpoint-service';
 
 interface NavLink {
   label: string;
@@ -20,6 +30,10 @@ interface NavLink {
   },
 })
 export class HeaderNav {
+  protected readonly breakpoint = inject(BreakpointService);
+
+  readonly isLargeScreen = this.breakpoint.isLargeScreen;
+
   private readonly menuButton = viewChild<ElementRef<HTMLButtonElement>>('menuButton');
 
   isNavOpen = signal(false);
@@ -40,7 +54,7 @@ export class HeaderNav {
 
           if (activeEntries.length > 0) {
             const active = activeEntries.reduce((prev, curr) =>
-              curr.boundingClientRect.top < prev.boundingClientRect.top ? curr : prev
+              curr.boundingClientRect.top < prev.boundingClientRect.top ? curr : prev,
             );
             this.activeSection.set(active.target.id);
           }
@@ -48,7 +62,7 @@ export class HeaderNav {
         {
           threshold: 0,
           rootMargin: '-30% 0px -70% 0px',
-        }
+        },
       );
 
       this.navLinks.forEach((link) => {

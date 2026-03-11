@@ -1,13 +1,15 @@
-<app-section id="about">
-  <app-section-title text="About Me" />
-  <div class="flex flex-wrap gap-4 items-center justify-center">
-    <img src="images/coding.png" alt="Coding" class="size-64 rounded-2xl" />
-    <p class="text-balance text-center max-w-sm">
-      Beginner programmer who enjoys learning and exploring how things work. I like building small
-      projects that help me practice and improve.
-    </p>
-  </div>
+<om-fade [animateOnlyOnce]="false">
+  <section id="about" class="min-h-screen flex flex-col items-center justify-center gap-8">
+    <app-section-title text="About Me" />
+    <div class="flex flex-wrap gap-4 items-center justify-center">
+      <img src="images/coding.png" alt="Coding" class="size-64 rounded-2xl drop-shadow-xl" />
+      <p class="text-balance text-center max-w-sm">
+        Beginner person who enjoys learning and exploring how things work. I like building small
+        projects that help me practice and improve.
+      </p>
+    </div>
 
-  <app-interests />
-  <app-technologies />
-</app-section>
+    <app-interests />
+    <app-technologies />
+  </section>
+</om-fade>

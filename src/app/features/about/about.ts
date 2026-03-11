@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Section } from '../../shared/components/section/section';
 import { Interests } from './interests/interests';
 import { Technologies } from './technologies/technologies';
 import { SectionTitle } from '../../shared/components/section-title/section-title';
+import { NgxFadeComponent } from '@omnedia/ngx-fade';
 
 @Component({
   selector: 'app-about',
-  imports: [Section, Interests, Technologies, SectionTitle],
+  imports: [Interests, Technologies, SectionTitle, NgxFadeComponent],
   templateUrl: './about.html',
   styleUrl: './about.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
