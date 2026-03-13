@@ -1,4 +1,4 @@
-<nav class="bg-background p-2 rounded-xl drop-shadow-sm">
+<nav class="bg-background p-2 rounded-xl border-2 border-surface">
   <ul class="flex">
     @for (link of navLinks; track link.href) {
       @let isActive = activeSection() === link.id;
