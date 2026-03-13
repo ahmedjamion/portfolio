@@ -1,8 +1,13 @@
 <om-fade [animateOnlyOnce]="false">
-  <section id="contact" class="min-h-screen flex flex-col items-center justify-center gap-8">
+  <section id="contact" class="min-h-screen flex flex-col items-center justify-center gap-8 pt-16">
     <app-section-title text="Say Hi!" />
     <div class="flex flex-col gap-2">
-      <app-contact-item text="jamionahmedrashadi@gmail.com" iconName="email" iconSize="32" />
+      <app-contact-item
+        text="jamionahmedrashadi@gmail.com"
+        iconName="email"
+        iconSize="32"
+        [isEmail]="true"
+      />
       <app-contact-item text="Zamboanga City, Philippines" iconName="pin" iconSize="32" />
     </div>
 
@@ -11,13 +16,6 @@
         text="Github"
         url="https://www.github.com/ahmedjamion"
         iconName="github"
-        iconSize="20"
-      />
-
-      <app-contact-social-link
-        text="Linked In"
-        url="https://www.linkedin.com/in/ahmed-rashad-jamion"
-        iconName="linkedIn"
         iconSize="20"
       />
     </div>

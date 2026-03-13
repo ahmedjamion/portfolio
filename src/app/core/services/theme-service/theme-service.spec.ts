@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BreakpointService } from './breakpoint-service';
+import { ThemeService } from './theme-service';
 
-describe('BreakpointService', () => {
-  let service: BreakpointService;
+describe('ThemeService', () => {
+  let service: ThemeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(BreakpointService);
+    service = TestBed.inject(ThemeService);
   });
 
   it('should be created', () => {

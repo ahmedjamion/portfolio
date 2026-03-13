@@ -5,44 +5,16 @@
   --color-primary: #294192;
   --color-on-primary: #e9ebf4;
   --color-background: #d4d4e1;
-  --color-surface: #a2a1c1;
+  --color-on-background: #0a0f32;
+  --color-surface: #bfbdd4;
+  --color-on-surface: #15122d;
 }
 
 .dark {
-  --color-primary: #3b82f6;
-  --color-secondary: #2563eb;
-}
-
-.animate-hidden {
-  opacity: 0;
-}
-
-.animate-in {
-  animation: slideInRight 0.5s ease-out forwards;
-}
-
-.animate-out {
-  animation: slideOutLeft 0.3s ease-in forwards;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOutLeft {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(30px);
-  }
+  --color-primary: #294192;
+  --color-on-primary: #e9ebf4;
+  --color-background: #252544;
+  --color-on-background: #dee0eb;
+  --color-surface: #43436e;
+  --color-on-surface: #deddeb;
 }

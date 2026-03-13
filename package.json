@@ -35,6 +35,7 @@
     "@ng-icons/devicon": "^32.1.0",
     "@ng-icons/lucide": "^32.1.0",
     "@omnedia/ngx-fade": "^4.0.1",
+    "@omnedia/ngx-marquee": "^4.0.1",
     "@omnedia/ngx-typewriter": "^4.0.1",
     "@tailwindcss/postcss": "^4.1.13",
     "postcss": "^8.5.6",

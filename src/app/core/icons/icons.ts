@@ -2,18 +2,18 @@ import { bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import {
   lucideArrowDown,
   lucideAtSign,
+  lucideComputer,
   lucideCopy,
-  lucideMail,
   lucideMapPin,
   lucideMenu,
   lucideMessageCircleMore,
   lucideMonitorSmartphone,
+  lucideMoon,
   lucidePhoneCall,
-  lucidePin,
+  lucideSun,
   lucideTabletSmartphone,
 } from '@ng-icons/lucide';
 import {
-  diAngularmaterialOriginal,
   diAngularOriginal,
   diCplusplusOriginal,
   diCss3Original,
@@ -25,7 +25,6 @@ import {
   diJetpackcomposeOriginal,
   diKotlinOriginal,
   diLaravelOriginal,
-  diMaterialuiOriginal,
   diMysqlOriginal,
   diPhpOriginal,
   diTailwindcssOriginal,
@@ -64,4 +63,8 @@ export const ICONS = {
   tailwind: diTailwindcssOriginal,
 
   arrowDown: lucideArrowDown,
+
+  moon: lucideMoon,
+  sun: lucideSun,
+  computer: lucideComputer,
 };

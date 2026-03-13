@@ -1,0 +1,24 @@
+<div class="flex" role="group" aria-label="Theme selection">
+  @for (opt of options; track opt.value) {
+    @let isCurrentPref = currentPref() === opt.value;
+    <button
+      type="button"
+      (click)="themeService.setPreference(opt.value)"
+      [attr.aria-pressed]="currentPref() === opt.value"
+      class="rounded-full p-2"
+      [class]="isCurrentPref ? 'bg-surface text-on-surface' : 'text-on-background'"
+    >
+      @switch (opt.value) {
+        @case ('dark') {
+          <app-icon name="moon" size="20" />
+        }
+        @case ('light') {
+          <app-icon name="sun" size="20" />
+        }
+        @case ('system') {
+          <app-icon name="computer" size="20" />
+        }
+      }
+    </button>
+  }
+</div>

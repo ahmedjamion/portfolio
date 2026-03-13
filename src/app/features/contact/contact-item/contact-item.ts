@@ -12,4 +12,5 @@ export class ContactItem {
   readonly text = input.required<string>();
   readonly iconName = input.required<string>();
   readonly iconSize = input.required<string>();
+  readonly isEmail = input<boolean>(false);
 }

@@ -1,59 +1,16 @@
-<nav class="hidden md:block">
-  <ul class="flex text-lg">
+<nav class="bg-background p-2 rounded-xl drop-shadow-sm">
+  <ul class="flex">
     @for (link of navLinks; track link.href) {
       @let isActive = activeSection() === link.id;
-      <li>
-        <a
-          [href]="link.href"
-          (click)="closeNav()"
-          class="py-1 px-3 rounded-2xl transition-all duration-300 ease-in-out"
-          [class.bg-primary]="isActive"
-          [class.text-on-primary]="isActive"
-        >
+      <li
+        (click)="closeNav()"
+        class="transition-all duration-300 ease-in-out px-2 rounded-lg"
+        [class.bg-surface]="isActive"
+      >
+        <a [href]="link.href">
           {{ link.label }}
         </a>
       </li>
     }
   </ul>
-</nav>
-
-<nav class="relative md:hidden flex items-center gap-2">
-  @if (!isNavOpen()) {
-    <span class="text-lg font-semibold bg-primary text-on-primary px-3 py-1 rounded-full">{{
-      activeSection() | titlecase
-    }}</span>
-  }
-
-  <button
-    (click)="toggleNav()"
-    class="flex items-center cursor-pointer"
-    #menuButton
-    [attr.aria-label]="isNavOpen() ? 'Close menu' : 'Open menu'"
-  >
-    <app-icon name="menu" size="24" />
-  </button>
-
-  <ng-template
-    cdkConnectedOverlay
-    [cdkConnectedOverlayOrigin]="menuButton"
-    [cdkConnectedOverlayOpen]="isNavOpen()"
-  >
-    <ul
-      class="absolute right-0 flex flex-col items-center bg-background rounded-xl p-4 gap-4 text-lg drop-shadow-lg"
-    >
-      @for (link of navLinks; track link.href) {
-        @let isActive = activeSection() === link.id;
-        <li>
-          <a
-            [href]="link.href"
-            (click)="closeNav()"
-            [class.bg-primary]="isActive"
-            [class.text-on-primary]="isActive"
-            class="px-3 py-1 rounded-full"
-            >{{ link.label }}</a
-          >
-        </li>
-      }
-    </ul>
-  </ng-template>
 </nav>

@@ -6,12 +6,7 @@ import {
   ElementRef,
   viewChild,
   inject,
-  effect,
 } from '@angular/core';
-import { Icon } from '../../icon/icon';
-import { CdkConnectedOverlay } from '@angular/cdk/overlay';
-import { TitleCasePipe } from '@angular/common';
-import { BreakpointService } from '../../../../core/services/breakpoint-service/breakpoint-service';
 
 interface NavLink {
   label: string;
@@ -21,7 +16,7 @@ interface NavLink {
 
 @Component({
   selector: 'app-header-nav',
-  imports: [Icon, CdkConnectedOverlay, TitleCasePipe],
+  imports: [],
   templateUrl: './header-nav.html',
   styleUrl: './header-nav.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -30,10 +25,6 @@ interface NavLink {
   },
 })
 export class HeaderNav {
-  protected readonly breakpoint = inject(BreakpointService);
-
-  readonly isLargeScreen = this.breakpoint.isLargeScreen;
-
   private readonly menuButton = viewChild<ElementRef<HTMLButtonElement>>('menuButton');
 
   isNavOpen = signal(false);
@@ -82,5 +73,6 @@ export class HeaderNav {
 
   closeNav() {
     this.isNavOpen.set(false);
+    console.log('');
   }
 }
