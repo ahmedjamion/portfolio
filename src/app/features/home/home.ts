@@ -18,6 +18,6 @@ export class Home {
     'Flat Earther',
     'Doom Scroller',
     'Beginner Person',
-    'Veteran Noob',
+    'Conspiracy Theory Enjoyer',
   ]);
 }

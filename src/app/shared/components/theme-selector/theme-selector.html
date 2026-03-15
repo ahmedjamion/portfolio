@@ -5,8 +5,9 @@
       type="button"
       (click)="themeService.setPreference(opt.value)"
       [attr.aria-pressed]="currentPref() === opt.value"
-      class="rounded-full p-2"
+      class="rounded-full p-2 drop-shadow-none hover:enabled:scale-110 hover:enabled:drop-shadow-on-background/40 hover:enabled:drop-shadow-xs cursor-pointer disabled:cursor-default transition-all duration-300 ease-in-out"
       [class]="isCurrentPref ? 'bg-surface text-on-surface' : 'text-on-background'"
+      [disabled]="isCurrentPref"
     >
       @switch (opt.value) {
         @case ('dark') {

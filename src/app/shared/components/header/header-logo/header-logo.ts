@@ -6,6 +6,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './header-logo.html',
   styleUrl: './header-logo.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { class: 'h-full' },
 })
 export class HeaderLogo {}
