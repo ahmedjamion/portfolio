@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1773550833243,
+  "timestamp": 1774539856666,
   "index": "/portfolio/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/portfolio/favicon.ico",
         "/portfolio/index.html",
-        "/portfolio/main-U3ESBXEK.js",
+        "/portfolio/main-YLMLHE6A.js",
         "/portfolio/manifest.webmanifest",
-        "/portfolio/styles-XBXMHVJW.css"
+        "/portfolio/styles-76ITNHWF.css"
       ],
       "patterns": []
     },
@@ -50,10 +50,10 @@
     "/portfolio/images/profile.png": "27ece2936f8ea779ac0676d3ebf0a74ab6b76c3a",
     "/portfolio/images/sleep.png": "6c68a306a3cd8b58a1594b33c18d74a12957cc4f",
     "/portfolio/images/todolist.png": "72da1ccee966b70f26927ec8c30e8ff995a0e72b",
-    "/portfolio/index.html": "9ece3b8e7936a0a42347e9d92cb776ec4340bff3",
-    "/portfolio/main-U3ESBXEK.js": "670457e298fdfcc3310aaa5da24ec1f0157b0578",
+    "/portfolio/index.html": "bee10f55c2f9b28be8707ff7b448ab9e85aeacbe",
+    "/portfolio/main-YLMLHE6A.js": "1b50ef43c323ebe185af57e1bfa2607ed8c187bc",
     "/portfolio/manifest.webmanifest": "ecde7b1d980b4397e2b7e8b363a57343f5edc5a7",
-    "/portfolio/styles-XBXMHVJW.css": "3a190f8dc1372a3090186eb8f7502725e6034ed1"
+    "/portfolio/styles-76ITNHWF.css": "66c42d98f0f3d8c8542e2601ece8f757608d8ade"
   },
   "navigationUrls": [
     {
