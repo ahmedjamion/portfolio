@@ -46,7 +46,7 @@ export class ThemeService {
       const active = this.activeTheme();
       const pref = this.preference();
 
-      this.syncHtmlClass(active);
+      this.syncHtmlTheme(active);
       localStorage.setItem('user-theme-preference', pref);
     });
   }
@@ -62,6 +62,11 @@ export class ThemeService {
     } else {
       this.renderer.removeClass(host, 'dark');
     }
+  }
+
+  private syncHtmlTheme(theme: ActiveTheme): void {
+    const host = this.document.documentElement;
+    this.renderer.setAttribute(host, 'data-theme', theme);
   }
 
   private getSavedPreference(): ThemePreference {

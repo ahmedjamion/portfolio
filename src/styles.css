@@ -10,7 +10,7 @@
   --color-on-surface: #15122d;
 }
 
-.dark {
+[data-theme='dark'] {
   --color-primary: #294192;
   --color-on-primary: #e9ebf4;
   --color-background: #252544;

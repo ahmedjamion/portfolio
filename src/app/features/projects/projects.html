@@ -1,13 +1,14 @@
 <om-fade [animateOnlyOnce]="false">
   <section id="projects" class="min-h-screen flex flex-col items-center justify-center gap-8 pt-16">
     <app-section-title text="My Projects" />
-    <div>
+    <div class="flex gap-4 h-full flex-wrap items-center justify-center">
       @for (project of projects(); track project.name) {
         <app-project
           [name]="project.name"
           [description]="project.description"
           [imageUrl]="project.imageUrl"
           [githubUrl]="project.githubUrl"
+          [liveUrl]="project.liveUrl"
         />
       }
     </div>
